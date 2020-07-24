@@ -10,4 +10,5 @@ public class TestException {
         int result = numerator/denominator;
         System.out.printf("\nResult: %d / %d = %d \n",numerator, denominator, result);
     }
+    
 }
