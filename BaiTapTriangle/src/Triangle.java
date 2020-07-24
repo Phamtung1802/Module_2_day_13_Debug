@@ -3,6 +3,18 @@ import java.util.Scanner;
 public class Triangle {
     private int a,b,c;
 
+    public void setA(int a) {
+        this.a = a;
+    }
+
+    public void setB(int b) {
+        this.b = b;
+    }
+
+    public void setC(int c) {
+        this.c = c;
+    }
+
     public Triangle() {
         System.out.println("Nhap 3 canh Tam Giac");
         Scanner scanner=new Scanner(System.in);
@@ -12,8 +24,16 @@ public class Triangle {
         System.out.println(b);
         this.c=scanner.nextInt();
         System.out.println(c);
-        isValidTriangle();
-        System.out.println("tam giac");
+        System.out.println("tam giac : a="+a+" b= "+b+" c= "+c);
+        try {
+            isValidTriangle();
+        }catch (IllegalArgumentException e){
+            this.setA(3);
+            this.setB(4);
+            this.setC(5);
+            System.out.println(e.getMessage());
+            System.out.println("da sua lai tam giac hop le: a="+a+" b= "+b+" c= "+c);
+        }
     }
 
 
